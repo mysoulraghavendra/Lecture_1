@@ -42,9 +42,9 @@ public class Employee {
 
 	
 	
-	@OneToMany(mappedBy = "employee",cascade = CascadeType.ALL)
+	@OneToMany(cascade = CascadeType.ALL)
 	
-	
+	@JoinColumn(name = "emp_code")
 	private List<Parking> parkingRecords;
 	
 

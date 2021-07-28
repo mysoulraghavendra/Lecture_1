@@ -47,8 +47,6 @@ public class InsertionActivity {
 					
 					employee.setParkingRecords(list);
 					
-					parking1.setEmployee(employee);
-					parking2.setEmployee(employee);
 					session.save(employee);
 					
 					

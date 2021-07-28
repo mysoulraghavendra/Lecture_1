@@ -32,7 +32,7 @@ public class Parking {
 	
 
 	@ManyToOne	
-	
+	@JoinColumn(name = "emp_code")
 	private Employee employee;
 
 
