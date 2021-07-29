@@ -36,18 +36,46 @@ public class InsertionActivity {
 					parking2.setVid("up32 22");
 					parking2.setVname("Maruti Zen");
 					
+					
+					//Second Record
+					
+					Parking parking3=new Parking();
+					
+					parking3.setVid("up32 33");
+					parking3.setVname("Bolero");
+					
+					
+					
+					Parking parking4=new Parking();
+					parking4.setVid("up32 44");
+					parking4.setVname("Scorpio");
+					
+				
+					
+					
 					List<Parking> list=new ArrayList<Parking>();
 					
 					list.add(parking1);
 					list.add(parking2);
 					
+					
+					List<Parking> list1=new ArrayList<Parking>();
+					list1.add(parking3);
+					list1.add(parking4);
+					
 					Employee employee=new Employee();
 					employee.setName("Person1");
 					employee.setSalary(1000);
 					
+					Employee employee1=new Employee();
+					employee1.setName("Person2");
+					employee1.setSalary(2000);
+					
 					employee.setParkingRecords(list);
+					employee1.setParkingRecords(list1);
 					
 					session.save(employee);
+					session.save(employee1);
 					
 					
 					
