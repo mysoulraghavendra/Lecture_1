@@ -25,6 +25,10 @@ public class Employee {
 	private String name;
 	
 	
+	@Column(name="salary")
+	private double salary;
+	
+	
 	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name = "emp_code")
 	private Set<Parking> parkingVehicles;
@@ -70,6 +74,16 @@ public class Employee {
 
 	public void setParkingVehicles(Set<Parking> parkingVehicles) {
 		this.parkingVehicles = parkingVehicles;
+	}
+
+
+	public double getSalary() {
+		return salary;
+	}
+
+
+	public void setSalary(double salary) {
+		this.salary = salary;
 	}
 
 

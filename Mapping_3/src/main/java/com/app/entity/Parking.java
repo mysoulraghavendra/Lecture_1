@@ -17,12 +17,9 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 @Entity
 @Table(name = "parking")
-
-
 public class Parking {
 	
-	@Id
-	
+	@Id	
 	@Column(name="vehicle_id")
 	private String vid;
 	
