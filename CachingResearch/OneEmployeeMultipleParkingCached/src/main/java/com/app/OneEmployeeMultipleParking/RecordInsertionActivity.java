@@ -47,7 +47,28 @@ public class RecordInsertionActivity
 			
 			
 			
+			Parking vehicle_3=new Parking();
+			vehicle_3.setVid("up32 ay3333");
+			vehicle_3.setVtype("2Wheeler");
+			
+			
+			Parking vehicle_4=new Parking();
+			vehicle_4.setVid("up 4444");
+			vehicle_4.setVtype("4wheeler");
+			
+			
+			Set<Parking> vehicles_1=new HashSet<Parking>();
+			vehicles_1.add(vehicle_3);
+			vehicles_1.add(vehicle_4);
+			
+			Employee employee_1=new Employee();
+			employee_1.setName("Person2");
+			employee_1.setSalary(4000);
+			employee_1.setParkingVehicles(vehicles_1);
+			
+			
 			session.save(employee);
+			session.save(employee_1);
 			
 			
 			

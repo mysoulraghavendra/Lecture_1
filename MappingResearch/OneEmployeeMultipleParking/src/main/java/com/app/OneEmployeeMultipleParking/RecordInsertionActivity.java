@@ -14,6 +14,8 @@ import com.app.OneEmployeeMultipleParkinge.entity.Parking;
  * Hello world!
  *
  */
+
+
 public class RecordInsertionActivity 
 {
 	public static void main(String[] args) {
