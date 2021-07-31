@@ -8,9 +8,9 @@ import java.util.Set;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import com.app.OneEmployeeMultipleParking.entity.Employee;
+import com.app.OneEmployeeMultipleParking.entity.Parking;
 import com.app.OneEmployeeMultipleParking.util.HibernateUtil;
-import com.app.OneEmployeeMultipleParkinge.entity.Employee;
-import com.app.OneEmployeeMultipleParkinge.entity.Parking;
 
 /**
  * Hello world!

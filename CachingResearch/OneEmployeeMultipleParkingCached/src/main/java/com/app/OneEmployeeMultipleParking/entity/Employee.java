@@ -1,4 +1,4 @@
-package com.app.OneEmployeeMultipleParkinge.entity;
+package com.app.OneEmployeeMultipleParking.entity;
 
 import java.util.List;
 import java.util.Set;
@@ -32,7 +32,7 @@ public class Employee {
 	
 	
 	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn(name = "code")
+	@JoinColumn(name = "emp_code")
 	private List<Parking> parkingVehicles;
 
 

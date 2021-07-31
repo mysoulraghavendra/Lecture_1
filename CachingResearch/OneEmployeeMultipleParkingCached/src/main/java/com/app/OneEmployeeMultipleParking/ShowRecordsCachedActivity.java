@@ -6,8 +6,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
+import com.app.OneEmployeeMultipleParking.entity.Employee;
 import com.app.OneEmployeeMultipleParking.util.HibernateUtil;
-import com.app.OneEmployeeMultipleParkinge.entity.Employee;
 
 public class ShowRecordsCachedActivity {
 	
@@ -25,7 +25,18 @@ public class ShowRecordsCachedActivity {
 					
 					
 					List<Employee> _list=session1.createQuery("from Employee").getResultList();
+					for(Employee emp:_list)
+					{
+						
+							System.out.println("-----------------------------------------------");
 					
+							System.out.println(emp);
+							
+							System.out.println("-----------------------------------------------");
+					}
+			
+			
+			
 					
 					
 					
@@ -35,13 +46,6 @@ public class ShowRecordsCachedActivity {
 					HibernateUtil.shutDown();
 					
 					
-					for(Employee emp:_list)
-						{
-						
-								System.out.println(emp);
-						}
-				
-				
 				
 				}
 			catch(Exception e)

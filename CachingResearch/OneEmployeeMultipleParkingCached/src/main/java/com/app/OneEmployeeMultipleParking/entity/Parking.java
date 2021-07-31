@@ -1,4 +1,4 @@
-package com.app.OneEmployeeMultipleParkinge.entity;
+package com.app.OneEmployeeMultipleParking.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -80,8 +80,9 @@ public class Parking {
 
 	@Override
 	public String toString() {
-		return "Parking [vid=" + vid + ", vtype=" + vtype + ", employee=" + employee + "]";
+		return "Parking [vid=" + vid + ", vtype=" + vtype + "]";
 	}
-	
-	
+
+
+
 }

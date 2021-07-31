@@ -12,11 +12,11 @@
         <property name="hibernate.current_session_context_class">thread</property>
         <property name="hibernate.show_sql">true</property>
          <property name="hibernate.format_sql">true</property>
-        <property name="hibernate.hbm2ddl.auto">create-drop</property> 
+        <!-- <property name="hibernate.hbm2ddl.auto">create-drop</property>  -->
         <property name="hibernaete.dialect">org.hibernate.dialect.MySQLDialect</property>
         
-        <mapping class="com.app.OneEmployeeMultipleParkinge.entity.Parking"/>
-        <mapping class="com.app.OneEmployeeMultipleParkinge.entity.Employee"/>
+        <mapping class="com.app.OneEmployeeMultipleParking.entity.Parking"/>
+        <mapping class="com.app.OneEmployeeMultipleParking.entity.Employee"/>
 	
         
     </session-factory>
