@@ -29,7 +29,6 @@ public class ShowRecordsCachedActivity {
 						
 						
 						
-						
 						transaction.commit();
 						
 						session1.close();

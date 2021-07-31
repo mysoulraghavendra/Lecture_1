@@ -80,7 +80,7 @@ public class Parking {
 
 	@Override
 	public String toString() {
-		return "Parking [vid=" + vid + ", vtype=" + vtype + ", employee=" + employee + "]";
+		return "Parking [vid=" + vid + ", vtype=" + vtype+"]";
 	}
 	
 	

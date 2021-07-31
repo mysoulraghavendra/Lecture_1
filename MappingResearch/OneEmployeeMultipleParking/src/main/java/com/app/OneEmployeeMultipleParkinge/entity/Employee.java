@@ -89,9 +89,11 @@ public class Employee {
 
 	@Override
 	public String toString() {
-		return "Employee [code=" + code + ", name=" + name + ", parkingVehicles=" + parkingVehicles + "]";
+		return "Employee [code=" + code + ", name=" + name + ", salary=" + salary + ", parkingVehicles="
+				+ parkingVehicles + "]";
 	}
-	
+
+
 	
 	
 

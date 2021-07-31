@@ -1,5 +1,6 @@
 package com.app.OneEmployeeMultipleParkinge.entity;
 
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -31,20 +32,20 @@ public class Employee {
 	
 	
 	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn(name = "emp_code")
-	private Set<Parking> parkingVehicles;
+	@JoinColumn(name = "code")
+	private List<Parking> parkingVehicles;
+
+
+	@Override
+	public String toString() {
+		return "Employee [code=" + code + ", name=" + name + ", salary=" + salary + ", parkingVehicles="
+				+ parkingVehicles + "]";
+	}
 
 
 	public Employee() {
 		super();
 		// TODO Auto-generated constructor stub
-	}
-
-
-	public Employee(String name, Set<Parking> parkingVehicles) {
-		super();
-		this.name = name;
-		this.parkingVehicles = parkingVehicles;
 	}
 
 
@@ -68,16 +69,6 @@ public class Employee {
 	}
 
 
-	public Set<Parking> getParkingVehicles() {
-		return parkingVehicles;
-	}
-
-
-	public void setParkingVehicles(Set<Parking> parkingVehicles) {
-		this.parkingVehicles = parkingVehicles;
-	}
-
-
 	public double getSalary() {
 		return salary;
 	}
@@ -88,11 +79,17 @@ public class Employee {
 	}
 
 
-	@Override
-	public String toString() {
-		return "Employee [code=" + code + ", name=" + name + ", parkingVehicles=" + parkingVehicles + "]";
+	public List<Parking> getParkingVehicles() {
+		return parkingVehicles;
 	}
-	
+
+
+	public void setParkingVehicles(List<Parking> parkingVehicles) {
+		this.parkingVehicles = parkingVehicles;
+	}
+
+
+
 	
 	
 

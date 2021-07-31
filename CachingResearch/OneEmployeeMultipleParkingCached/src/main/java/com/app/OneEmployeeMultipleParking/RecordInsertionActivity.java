@@ -1,6 +1,8 @@
 package com.app.OneEmployeeMultipleParking;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import org.hibernate.Session;
@@ -36,7 +38,7 @@ public class RecordInsertionActivity
 			vehicle_2.setVtype("4wheeler");
 			
 			
-			Set<Parking> vehicles=new HashSet<Parking>();
+			List<Parking> vehicles=new ArrayList<Parking>();
 			vehicles.add(vehicle_1);
 			vehicles.add(vehicle_2);
 			
@@ -57,7 +59,7 @@ public class RecordInsertionActivity
 			vehicle_4.setVtype("4wheeler");
 			
 			
-			Set<Parking> vehicles_1=new HashSet<Parking>();
+			List<Parking> vehicles_1=new ArrayList<Parking>();
 			vehicles_1.add(vehicle_3);
 			vehicles_1.add(vehicle_4);
 			
@@ -86,6 +88,8 @@ public class RecordInsertionActivity
 			// TODO: handle exception
 			
 			e.printStackTrace();
+			
+			HibernateUtil.shutDown();
 			
 			
 			System.out.println("Reason of Error::"+e.getMessage());
