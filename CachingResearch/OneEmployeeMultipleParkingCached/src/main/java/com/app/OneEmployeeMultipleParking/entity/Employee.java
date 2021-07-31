@@ -14,8 +14,12 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+
 @Entity
 @Table(name = "employee")
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class Employee {
 	
 	@Id
@@ -32,6 +36,7 @@ public class Employee {
 	
 	
 	@OneToMany(cascade = CascadeType.ALL)
+	@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 	@JoinColumn(name = "emp_code")
 	private List<Parking> parkingVehicles;
 

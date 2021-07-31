@@ -24,7 +24,7 @@ public class ShowRecordsCachedActivity {
 					Transaction transaction=session1.beginTransaction();
 					
 					
-					List<Employee> _list=session1.createQuery("from Employee").getResultList();
+					List<Employee> _list=session1.createQuery("from Employee").setCacheable(true).setCacheRegion("vedprakashcache.cache").getResultList();
 					for(Employee emp:_list)
 					{
 						
@@ -43,6 +43,27 @@ public class ShowRecordsCachedActivity {
 					transaction.commit();
 					
 					session1.close();
+					
+					
+					System.out.println("--------------------------Session 1 Finished-----------");
+					
+					
+					
+					
+					Session session_2=factory.openSession();
+					_list.clear();
+					
+					_list=session_2.createQuery("from Employee").setCacheable(true).setCacheRegion("vedprakashcache.cache").getResultList();
+					
+					
+					for(Employee employee:_list)
+						{		
+								System.out.println(employee);
+					
+						}
+					
+					
+					
 					HibernateUtil.shutDown();
 					
 					

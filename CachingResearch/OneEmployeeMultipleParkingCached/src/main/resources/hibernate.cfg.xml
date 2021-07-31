@@ -12,8 +12,15 @@
         <property name="hibernate.current_session_context_class">thread</property>
         <property name="hibernate.show_sql">true</property>
          <property name="hibernate.format_sql">true</property>
+          <property name="hibernate.cache.use_second_level_cache">true</property>
+        <property name="hibernate.cache.use_query_cache">true</property>
+      
+      
         <!-- <property name="hibernate.hbm2ddl.auto">create-drop</property>  -->
-        <property name="hibernaete.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+            <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.internal.EhcacheRegionFactory</property>
+        <property name="hibernate.javax.cache.provider">net.sf.ehcache.hibernate.EhCacheProvider</property>
+    
         
         <mapping class="com.app.OneEmployeeMultipleParking.entity.Parking"/>
         <mapping class="com.app.OneEmployeeMultipleParking.entity.Employee"/>
